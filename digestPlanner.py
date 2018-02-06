@@ -120,6 +120,7 @@ class Enzyme:
 with open('plasmid.txt','r') as f_open:
     plasmid_sequence = f_open.read()
 
+plasmid_sequence = plasmid_sequence.strip()
 plasmid_sequence = plasmid_sequence.upper()
 
 
