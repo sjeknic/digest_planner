@@ -7,7 +7,7 @@ import re
 from copy import copy
 import operator
 import math
-
+from tabulate import tabulate
 
 # In[2]:
 
@@ -201,7 +201,11 @@ for key in enzdic.keys():
     
 outputArray.sort(key=operator.itemgetter(1))
 
-print '---------------------'
-for item in outputArray[0:6]:
-    print item[0], item[2], item[1]
-print '---------------------'    
+headers = ['Enzyme', 'Pattern', 'Score']
+print ''
+table = []
+
+for item in outputArray[0:8]:
+    table.append([item[0], item[2], item[1]])
+print tabulate(table,headers=headers)
+print ''
