@@ -6,7 +6,6 @@
 import re
 from copy import copy
 import operator
-import math
 from tabulate import tabulate
 
 # In[2]:
@@ -81,7 +80,7 @@ class Enzyme:
                 
                 if band > 6500 and self.spacing[-1] < 1000:
                     self.cost += 100
-                elif band > 3500 and self.spacing[-1] < 400:
+                elif band > 3500 and self.spacing[-1] < 500:
                     self.cost += 25
                 elif band > 1500 and self.spacing[-1] < 100:
                     self.cost += 50
@@ -93,7 +92,7 @@ class Enzyme:
                 
                 if band > 6500 and self.spacing[-1] < 1000:
                     self.cost += 100
-                elif band > 3500 and self.spacing[-1] < 400:
+                elif band > 3500 and self.spacing[-1] < 500:
                     self.cost += 25
                 elif self.spacing[-1] < 100:
                     self.cost += 50
