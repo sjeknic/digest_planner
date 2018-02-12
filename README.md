@@ -3,10 +3,10 @@
 
 Add plasmid sequence to plasmid.txt. Easiest way is to remove it and make a new file:
 
-'''
+```
 rm plasmid.txt
 vim plasmid.txt
-'''
+```
 
 Then just run digestPlanner.py. It will display a list of enzymes and the expected pattern they would produce. One small caveat is that it doesn't currently wrap around the plasmid, so if there is a recognition site that starts in the last couple bases, and includes the first couple bases, it won't be found. 
 
