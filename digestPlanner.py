@@ -51,7 +51,7 @@ class Enzyme:
         elif self.numberBands > 3:
             self.cost += self.numberBands
         elif self.numberBands == 1 or self.numberBands == 0:
-            self.cost += 250
+            self.cost += 999
         elif self.numberBands == 3:
             self.cost += -1
 
@@ -59,8 +59,10 @@ class Enzyme:
         for size in self.bandSizes:
             if size > 10000:
                 self.cost += 100
-            elif size > 6500:
-                self.cost += size/500
+            elif size > 7000:
+                self.cost += 50
+            elif size > 6000:
+                self.cost += 25
             elif size < 500:
                 self.cost += 100
             elif size < 1000:
