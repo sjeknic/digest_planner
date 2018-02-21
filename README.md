@@ -1,5 +1,10 @@
 # digest_planner
 
+You may need to install tabulate for the script to work.
+
+```
+pip install tabulate
+```
 
 Add plasmid sequence to plasmid.txt. Easiest way is to remove it and make a new file:
 
