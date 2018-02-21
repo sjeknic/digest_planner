@@ -183,6 +183,9 @@ for key in enzdic.keys():
 
 outputArray.sort(key=operator.itemgetter(1))
 
+print ""
+print "Plasmid length: " + str(len(plasmid_sequence)) + " bp"
+
 headers = ['Enzyme', 'Pattern', 'Score']
 print ''
 table = []
