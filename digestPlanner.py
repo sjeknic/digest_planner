@@ -1,5 +1,4 @@
 import re
-from copy import copy
 import operator
 from tabulate import tabulate
 import csv
@@ -28,7 +27,7 @@ class Enzyme:
         self.bandSizes = []
 
         if self.numberBands > 0:
-            tempSites = copy(self.sites)
+            tempSites = list(self.sites)
             for cut in self.sites:
                 if len(tempSites) > 2:
                     self.bandSizes.append(max(tempSites) - self.second_largest(tempSites))
@@ -69,7 +68,7 @@ class Enzyme:
                 self.cost += (1000-size)/15
 
         # Band spacing
-        tempBand = copy(self.bandSizes)
+        tempBand = list(self.bandSizes)
         for band in self.bandSizes:
             if len(tempBand) > 2:
                 self.spacing.append(max(tempBand) - self.second_largest(tempBand))
