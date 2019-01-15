@@ -17,7 +17,7 @@ class Enzyme:
             count += 1
             if x > m2:
                 if x >= m1:
-                    m1, m2 = x, m1            
+                    m1, m2 = x, m1
                 else:
                     m2 = x
         return m2 if count >= 2 else None
@@ -77,7 +77,7 @@ class Enzyme:
                     self.cost += 100
                 elif band > 3500 and self.spacing[-1] < 500:
                     self.cost += 25
-                elif band > 1500 and self.spacing[-1] < 100:
+                elif band > 1500 and self.spacing[-1] < 150:
                     self.cost += 50
 
                 tempBand.remove(max(tempBand))
@@ -123,7 +123,7 @@ outputArray = []
 for key in enzdic.keys():
 
     sites = []
-    sitesComp = [] 
+    sitesComp = []
 
     if enzdic[key].count('N') != 0:
         partOne = enzdic[key][0:enzdic[key].find('N')]
